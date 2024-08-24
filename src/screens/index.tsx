@@ -1,5 +1,7 @@
-import { Home } from "./home";
+import { SignUp } from "./signUp";
+import { SignIn } from "./signIn";
 
 export {
-    Home
+    SignUp,
+    SignIn
 }

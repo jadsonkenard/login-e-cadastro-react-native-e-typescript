@@ -1,5 +1,4 @@
 import { Loading } from "./src/components";
-import { ThemeProvider } from "styled-components/native";
 import {
   useFonts,
   Lexend_500Medium,
@@ -7,8 +6,10 @@ import {
   Lexend_400Regular,
   Lexend_900Black,
 } from "@expo-google-fonts/lexend";
+import { SafeAreaView, StatusBar } from "react-native";
 import { theme } from "./src/theme";
-import { Home } from "./src/screens";
+import { NavigationContainer } from "@react-navigation/native";
+import { Routes } from "./src/routes/routes";
 
 export default function App() {
   const [isLoadFonts] = useFonts({
@@ -21,8 +22,11 @@ export default function App() {
     return <Loading />;
   }
   return (
-    <ThemeProvider theme={theme}>
-        <Home />
-    </ThemeProvider>
+    <NavigationContainer>
+    <SafeAreaView style={{flex: 1}}>
+      <StatusBar translucent backgroundColor={theme.colors.brack100}/>
+        <Routes/>
+    </SafeAreaView>
+    </NavigationContainer>
   );
 }
