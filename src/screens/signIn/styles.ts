@@ -27,6 +27,10 @@ export const styles = StyleSheet.create({
     alignSelf: "flex-start",
     marginLeft: wp(7.5),
   },
+  touchableMessage: {
+    alignSelf: "flex-end",
+    marginRight: wp(7.5)
+  },
   message: {
     color: theme.colors.danger,
     fontFamily: theme.fonts.light,
@@ -37,4 +41,13 @@ export const styles = StyleSheet.create({
     alignSelf: "flex-start",
     marginLeft: wp(7.5),
   },
+  signWithText: {
+    fontFamily: theme.fonts.light,
+    color: theme.colors.gray,
+    fontSize: fz(2.2),
+    marginTop: hp(2)
+  },
+  signWith: {
+    flexDirection: "row"
+  }
 });

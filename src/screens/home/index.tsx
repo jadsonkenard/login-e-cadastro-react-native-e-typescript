@@ -6,7 +6,6 @@ export function Home({navigation}: StackTypeProps){
     return(
         <View style={styles.container}>
             <Text style={styles.title}>Home</Text>
-            <Button title="Login" onPress={() => navigation.navigate("SignIn")}/>
         </View>
     )
 }

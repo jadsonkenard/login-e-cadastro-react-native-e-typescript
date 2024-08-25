@@ -1,8 +1,8 @@
 import { View, Text } from "react-native";
 import { styles } from "./styles";
 import { StackTypeProps } from "../../routes/types";
-import { ButtonText, Input, Button } from "../../components";
-
+import { ButtonText, Input, Button, Social } from "../../components";
+import { google, apple, facebook } from "../../assets";
 
 export function SignUp({ navigation }: StackTypeProps) {
   return (
@@ -13,9 +13,15 @@ export function SignUp({ navigation }: StackTypeProps) {
       <Input placeholder="Senha" icon="lock-closed" eyePass="eye-off" />
       <Input placeholder="Confirmar senha" icon="lock-closed" eyePass="eye-off" />
       <Text style={styles.textTerms}>
-        Ao clicar no {<Text style={styles.message}>Register</Text>} você concorda com os termos de uso.
+        Ao se {<Text style={styles.message}>Cadastrar</Text>} você concorda com os termos de uso.
       </Text>
       <Button/>
+      <Text style={styles.signWithText}>Login com</Text>
+      <View style={styles.signWith}>
+        <Social source={google} />
+        <Social source={apple} />
+        <Social source={facebook} />
+      </View>
       <View style={styles.back}>
       <ButtonText title="Voltar" onPress={() => navigation.navigate("SignIn")}/>
       </View>
