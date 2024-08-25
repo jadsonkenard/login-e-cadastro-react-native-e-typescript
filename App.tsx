@@ -5,6 +5,7 @@ import {
   Lexend_700Bold,
   Lexend_400Regular,
   Lexend_900Black,
+  Lexend_300Light
 } from "@expo-google-fonts/lexend";
 import { SafeAreaView, StatusBar } from "react-native";
 import { theme } from "./src/theme";
@@ -17,13 +18,14 @@ export default function App() {
     Lexend_700Bold,
     Lexend_400Regular,
     Lexend_900Black,
+    Lexend_300Light
   });
   if (!isLoadFonts) {
     return <Loading />;
   }
   return (
     <NavigationContainer>
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={{flex: 1 }}>
       <StatusBar translucent backgroundColor={theme.colors.brack100}/>
         <Routes/>
     </SafeAreaView>

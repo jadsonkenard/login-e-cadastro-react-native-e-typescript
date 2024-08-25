@@ -4,5 +4,5 @@ export const colors = {
     brack: "#000000",
     brack100: "#111827",
     gray: "#626262",
-    gray100: "#262626"
+    gray100: "#192130"
 }
