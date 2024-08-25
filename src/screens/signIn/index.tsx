@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 import { StackTypeProps } from "../../routes/types";
-import { ButtonText, Input, Button, Social } from "../../components";
+import { Input, Button, Social } from "../../components";
 import { google, apple, facebook } from "../../assets";
 
 export function SignIn({ navigation }: StackTypeProps) {
@@ -16,18 +16,23 @@ export function SignIn({ navigation }: StackTypeProps) {
       </TouchableOpacity>
       <Button onPress={() => navigation.navigate("Home")} />
 
-      <Text style={styles.signWithText}>Login com</Text>
-      <View style={styles.signWith}>
-        <Social source={google} />
-        <Social source={apple} />
-        <Social source={facebook} />
+      <View style={styles.socialView}>
+        <Text style={styles.signWithText}>Login com</Text>
+        <View style={styles.signWith}>
+          <Social source={google} />
+          <Social source={apple} />
+          <Social source={facebook} />
+        </View>
       </View>
-      <View style={styles.register}>
-      <ButtonText
-          title="Registrar-se"
-          onPress={() => navigation.navigate("SignUp")}
-        />
-      </View>
+      <TouchableOpacity
+        style={styles.register}
+        onPress={() => navigation.navigate("SignUp")}
+      >
+        <Text style={styles.registerText}>
+          Clique <Text style={styles.messageRegister}>aqui</Text> para
+          registrar-se
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 }

@@ -32,15 +32,15 @@ export const styles = StyleSheet.create({
     fontSize: fz(2.2),
     color: theme.colors.gray,
     marginTop: hp(1),
-    marginLeft: wp(7.5),
-    marginRight: wp(7.5)
+  },
+  button: {
+    alignItems: "center"
   },
   message: {
     color: theme.colors.danger,
   },
   back: {
     alignSelf: "flex-start",
-    marginLeft: wp(7.5),
   },
   signWithText: {
     fontFamily: theme.fonts.light,
@@ -50,5 +50,8 @@ export const styles = StyleSheet.create({
   },
   signWith: {
     flexDirection: "row"
+  },
+  socialView: {
+    alignItems: "center",
   }
 });

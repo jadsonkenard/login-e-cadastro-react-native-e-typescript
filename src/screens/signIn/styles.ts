@@ -38,8 +38,15 @@ export const styles = StyleSheet.create({
     marginTop: hp(1),
   },
   register: {
-    alignSelf: "flex-start",
-    marginLeft: wp(7.5),
+    marginTop: hp(20)
+  },
+  messageRegister: {
+    color: theme.colors.primary,
+  },
+  registerText: {
+    fontFamily: theme.fonts.light,
+    color: theme.colors.gray,
+    fontSize: fz(2.2),
   },
   signWithText: {
     fontFamily: theme.fonts.light,
@@ -49,5 +56,8 @@ export const styles = StyleSheet.create({
   },
   signWith: {
     flexDirection: "row"
+  },
+  socialView: {
+    alignItems: "center",
   }
 });
