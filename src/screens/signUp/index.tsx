@@ -15,8 +15,10 @@ export function SignUp({ navigation }: StackTypeProps) {
       <Text style={styles.textTerms}>
         Ao clicar no {<Text style={styles.message}>Register</Text>} você concorda com os termos de uso.
       </Text>
-      <ButtonText title="Registrar-se"/>
       <Button/>
+      <View style={styles.back}>
+      <ButtonText title="Voltar" onPress={() => navigation.navigate("SignIn")}/>
+      </View>
     </View>
   );
 }

@@ -9,6 +9,8 @@ export const styles = StyleSheet.create({
         width: wp(18),
         borderRadius: 50,
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        elevation: 2,
+        marginTop: hp(2)
     }
 })

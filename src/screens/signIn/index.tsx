@@ -1,7 +1,7 @@
-import { View, Text, Button, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 import { StackTypeProps } from "../../routes/types";
-import { ButtonText, Input } from "../../components";
+import { ButtonText, Input, Button } from "../../components";
 
 export function SignIn({ navigation }: StackTypeProps) {
   return (
@@ -13,7 +13,10 @@ export function SignIn({ navigation }: StackTypeProps) {
       <TouchableOpacity>
         <Text style={styles.message}>Esqueceu a senha?</Text>
       </TouchableOpacity>
-      <ButtonText title="Login" />
+      <Button onPress={() => {}}/>
+      <View style={styles.register}>
+      <ButtonText title="Resgistrar-se" onPress={() => navigation.navigate("SignUp")}/>
+      </View>
     </View>
   );
 }
