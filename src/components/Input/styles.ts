@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
   },
   input: {
     position: "absolute",
-    left: wp(8),
+    left: wp(10),
     height: hp(7),
     width: wp(65),
     color: theme.colors.gray,

@@ -1,6 +1,6 @@
 import { Platform, StyleSheet } from "react-native";
 import { theme } from "../../theme";
-import { responsiveFontSize as fz } from "react-native-responsive-dimensions";
+import { responsiveHeight as hp, responsiveFontSize as fz } from "react-native-responsive-dimensions";
 
 export const styles = StyleSheet.create({
   container: {
@@ -18,4 +18,13 @@ export const styles = StyleSheet.create({
     fontSize: fz(5),
     color: theme.colors.primary,
   },
+  textTerms: {
+    fontFamily: theme.fonts.light,
+    fontSize: fz(2.2),
+    color: theme.colors.gray,
+    marginTop: hp(3)
+  },
+  message: {
+    color: theme.colors.danger
+  }
 });
