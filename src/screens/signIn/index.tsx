@@ -1,13 +1,19 @@
-import { View, Text, Button } from "react-native";
+import { View, Text, Button, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 import { StackTypeProps } from "../../routes/types";
+import { ButtonText, Input } from "../../components";
 
-export function SignIn({navigation}: StackTypeProps){
-    return(
-        <View style={styles.container}>
-            <Text style={styles.title}>Bem-vindo</Text>
-            <Text style={styles.subTitle}>de volta</Text>
-            <Button title="Login" onPress={() => navigation.navigate("Home")}/>
-        </View>
-    )
+export function SignIn({ navigation }: StackTypeProps) {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Bem-vindo</Text>
+      <Text style={styles.subTitle}>de volta</Text>
+      <Input icon="person" placeholder="Usuário ou Email" />
+      <Input icon="lock-closed" placeholder="Senha" />
+      <TouchableOpacity>
+        <Text style={styles.message}>Esqueceu a senha?</Text>
+      </TouchableOpacity>
+      <ButtonText title="Login" />
+    </View>
+  );
 }

@@ -25,6 +25,6 @@ export const styles = StyleSheet.create({
     marginTop: hp(3)
   },
   message: {
-    color: theme.colors.danger
+    color: theme.colors.danger,
   }
 });
