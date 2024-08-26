@@ -6,17 +6,30 @@ import { google, apple, facebook } from "../../assets";
 
 export function SignUp({ navigation }: StackTypeProps) {
   return (
-    <KeyboardAvoidingView style={styles.keyboardAvoidingView}>
+    <KeyboardAvoidingView
+      style={styles.keyboardAvoidingView}
+      behavior="padding"
+    >
       <ScrollView style={styles.scrollView} bounces={false}>
         <View style={styles.container}>
           <Text style={styles.title}>Criar uma</Text>
           <Text style={styles.subTitle}>conta</Text>
-          <Input placeholder="Nome de usuario ou Email" icon="person" />
-          <Input placeholder="Senha" icon="lock-closed" eyePass="eye-off" />
+          <Input
+            placeholder="Nome de usuario ou Email"
+            icon="person"
+            keyboardType="email-address"
+          />
+          <Input
+            placeholder="Senha"
+            icon="lock-closed"
+            eyePass="eye-off"
+            secureTextEntry
+          />
           <Input
             placeholder="Confirmar senha"
             icon="lock-closed"
             eyePass="eye-off"
+            secureTextEntry
           />
           <Text style={styles.textTerms}>
             Ao se {<Text style={styles.message}>Cadastrar</Text>} você concorda

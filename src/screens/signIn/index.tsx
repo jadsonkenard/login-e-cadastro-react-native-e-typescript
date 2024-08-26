@@ -13,8 +13,8 @@ export function SignIn({ navigation }: StackTypeProps) {
         <View style={styles.container}>
           <Text style={styles.title}>Bem-vindo</Text>
           <Text style={styles.subTitle}>de volta</Text>
-          <Input icon="person" placeholder="Usuário ou Email" />
-          <Input icon="lock-closed" placeholder="Senha" />
+          <Input icon="person" placeholder="Usuário ou Email" keyboardType="email-address"/>
+          <Input icon="lock-closed" placeholder="Senha" secureTextEntry/>
           <TouchableOpacity style={styles.touchableMessage}>
             <Text style={styles.message}>Esqueceu a senha?</Text>
           </TouchableOpacity>
