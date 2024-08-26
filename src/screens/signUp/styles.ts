@@ -45,7 +45,7 @@ export const styles = StyleSheet.create({
     color: theme.colors.danger,
   },
   back: {
-    marginTop: hp(2),
+    marginTop: hp(1.5),
     marginLeft: wp(7.5),
     alignSelf: "flex-start",
   },

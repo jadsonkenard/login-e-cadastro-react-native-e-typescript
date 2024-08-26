@@ -5,7 +5,7 @@ import { responsiveFontSize as fz } from "react-native-responsive-dimensions";
 export const styles = StyleSheet.create({
   title: {
     fontFamily: theme.fonts.bold,
-    fontSize: fz(4),
+    fontSize: fz(3),
     color: theme.colors.primary,
   },
 });

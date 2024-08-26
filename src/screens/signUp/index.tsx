@@ -3,8 +3,12 @@ import { styles } from "./styles";
 import { StackTypeProps } from "../../routes/types";
 import { ButtonText, Input, Button, Social } from "../../components";
 import { google, apple, facebook } from "../../assets";
+import { useState } from "react";
 
 export function SignUp({ navigation }: StackTypeProps) {
+  const [hidePass, setHidePass] = useState(true);
+  const [hidePassConfirm, setHidePassConfirm] = useState(true);
+
   return (
     <KeyboardAvoidingView
       style={styles.keyboardAvoidingView}
@@ -18,18 +22,23 @@ export function SignUp({ navigation }: StackTypeProps) {
             placeholder="Nome de usuario ou Email"
             icon="person"
             keyboardType="email-address"
+            autoCapitalize="none"
           />
           <Input
             placeholder="Senha"
             icon="lock-closed"
-            eyePass="eye-off"
-            secureTextEntry
+            eyePass={hidePass ? "eye-off" : "eye"}
+            secureTextEntry={hidePass}
+            hidePass={() => setHidePass(!hidePass)}
+            autoCapitalize="none"
           />
           <Input
             placeholder="Confirmar senha"
             icon="lock-closed"
-            eyePass="eye-off"
-            secureTextEntry
+            eyePass={hidePassConfirm ? "eye-off" : "eye"}
+            secureTextEntry={hidePassConfirm}
+            hidePass={() => setHidePassConfirm(!hidePassConfirm)}
+            autoCapitalize="none"
           />
           <Text style={styles.textTerms}>
             Ao se {<Text style={styles.message}>Cadastrar</Text>} você concorda
