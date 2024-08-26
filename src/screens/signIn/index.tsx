@@ -17,6 +17,7 @@ export function SignIn({ navigation }: StackTypeProps) {
         placeholder="Usuário ou Email"
         keyboardType="email-address"
         autoCapitalize="none"
+        autoCorrect={false}
       />
       <Input
         icon="lock-closed"
@@ -25,6 +26,7 @@ export function SignIn({ navigation }: StackTypeProps) {
         secureTextEntry={hidePass}
         hidePass={() => setHidePass(!hidePass)}
         autoCapitalize="none"
+        autoCorrect={false}
       />
       <TouchableOpacity style={styles.touchableMessage}>
         <Text style={styles.message}>Esqueceu a senha?</Text>

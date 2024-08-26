@@ -23,6 +23,7 @@ export function SignUp({ navigation }: StackTypeProps) {
             icon="person"
             keyboardType="email-address"
             autoCapitalize="none"
+            autoCorrect={false}
           />
           <Input
             placeholder="Senha"
@@ -31,6 +32,7 @@ export function SignUp({ navigation }: StackTypeProps) {
             secureTextEntry={hidePass}
             hidePass={() => setHidePass(!hidePass)}
             autoCapitalize="none"
+            autoCorrect={false}
           />
           <Input
             placeholder="Confirmar senha"
@@ -39,6 +41,7 @@ export function SignUp({ navigation }: StackTypeProps) {
             secureTextEntry={hidePassConfirm}
             hidePass={() => setHidePassConfirm(!hidePassConfirm)}
             autoCapitalize="none"
+            autoCorrect={false}
           />
           <Text style={styles.textTerms}>
             Ao se {<Text style={styles.message}>Cadastrar</Text>} você concorda
