@@ -7,15 +7,20 @@ import {
 } from "react-native-responsive-dimensions";
 
 export const styles = StyleSheet.create({
-  container: {
+  keyboardAvoidingView: {
     flex: 1,
+  },
+  scrollView: {
+    flex: 1,
+    backgroundColor: theme.colors.brack100
+  },
+  container: {
     alignItems: "center",
-    backgroundColor: theme.colors.brack100,
   },
   title: {
     alignSelf: "flex-start",
     marginLeft: wp(7.5),
-    marginTop: Platform.OS == "android" ? 50 : 0,
+    marginTop: hp(7),
     fontFamily: theme.fonts.black,
     fontSize: fz(5),
     color: theme.colors.primary,
@@ -40,6 +45,8 @@ export const styles = StyleSheet.create({
     color: theme.colors.danger,
   },
   back: {
+    marginTop: hp(2),
+    marginLeft: wp(7.5),
     alignSelf: "flex-start",
   },
   signWithText: {

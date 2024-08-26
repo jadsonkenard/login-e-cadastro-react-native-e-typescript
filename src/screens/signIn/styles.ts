@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   title: {
-    marginTop: Platform.OS == "android" ? 50 : 0,
+    marginTop: hp(7),
     fontFamily: theme.fonts.black,
     fontSize: fz(5),
     color: theme.colors.primary,
@@ -38,7 +38,7 @@ export const styles = StyleSheet.create({
     marginTop: hp(1),
   },
   register: {
-    marginTop: hp(20)
+    marginTop: hp(5)
   },
   messageRegister: {
     color: theme.colors.primary,
@@ -58,6 +58,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row"
   },
   socialView: {
+    marginTop: hp(10),
     alignItems: "center",
   }
 });
